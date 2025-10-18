@@ -1,0 +1,417 @@
+/* Genel Stiller */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links a.active {
+    background-color: #0056b3;
+    color: #fff;
+}
+.navbar .nav-links a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Hero (Ana Sayfa Başlığı) */
+.hero {
+    background: url('./assets/hero-image.jpg') no-repeat center center/cover;
+    height: 60vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-align: justify;
+}
+
+/* Genel Sayfa ve Kart Stilleri */
+main {
+    min-height: calc(100vh - 120px);
+}
+
+.page-content {
+    padding: 40px 0;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0056b3;
+}
+.page-content p {
+    text-align: justify; /* Ana sayfadaki paragrafları iki yana yaslar */
+}
+/* === HATANIN DÜZELTİLDİĞİ BÖLÜM BAŞLANGICI === */
+
+.project-section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+.project-content { /* YENİ KURAL: Asıl flex container bu olmalıydı */
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-content.reverse-order {
+    flex-direction: row-reverse;
+}
+
+.project-section .project-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-section h2 {
+    font-size: 2.2rem;
+    color: #0056b3;
+    margin-bottom: 0;
+}
+
+.project-section .image-wrapper {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.project-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-section .text-content {
+    flex: 2;
+    min-width: 300px;
+    text-align: left;
+}
+
+/* === HATANIN DÜZELTİLDİĞİ BÖLÜM SONU === */
+
+.project-section h3 {
+    font-size: 1.7rem;
+    color: #007bff;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.project-section h4 {
+    font-size: 1.4rem;
+    color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.project-section p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.project-section ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.project-section ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.project-section ul li::before {
+    content: '✓';
+    color: #28a745;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+/* Matematik Formülü Stili */
+.MathJax_Display {
+    overflow-x: auto;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+/* Form Stilleri */
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-btn {
+    background: #0056b3;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background: #004494;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .navbar .nav-links li {
+        margin: 5px 0;
+    }
+    .navbar .container {
+        flex-direction: column;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .project-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-content.reverse-order {
+        flex-direction: column;
+    }
+    .project-section h2 {
+        font-size: 1.8rem;
+    }
+    .project-section h3 {
+        font-size: 1.5rem;
+    }
+    .project-section .text-content, .project-section .image-wrapper {
+        min-width: unset;
+        width: 100%;
+    }
+}
+/* Analiz Sayfası Stilleri */
+.analysis-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section, .result-section {
+  width: 100%;
+  text-align: center;
+}
+
+.upload-section h3, .result-section h3 {
+  color: #0056b3;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-preview, .image-result {
+  margin-top: 20px;
+  border: 2px dashed #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-preview img, .image-result img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.image-preview h4, .image-result h4 {
+  margin-top: 0;
+  color: #555;
+}
+
+.analyze-button-section button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.analyze-button-section button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.analyze-button-section button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.placeholder-text {
+  color: #888;
+  font-style: italic;
+  padding: 50px 0;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Yükleme Animasyonu (Loader) */
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
