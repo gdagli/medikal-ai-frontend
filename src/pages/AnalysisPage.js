@@ -8,7 +8,7 @@ function AnalysisPage() {
   const [error, setError] = useState(''); // Hata mesajı
 
   // FastAPI Backend'inizin adresi. Değiştirmeniz gerekirse buradan yapabilirsiniz.
-  const API_BASE_URL = 'http://localhost:8000'; 
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
 
   // Dosya seçildiğinde çalışacak fonksiyon
   const handleFileChange = (event) => {
